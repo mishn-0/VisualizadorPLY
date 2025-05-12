@@ -1,0 +1,18 @@
+{
+  "rewrites": [
+    { "source": "/embedded", "destination": "/embedded.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "ALLOW-FROM *"
+        }
+      ]
+    }
+  ],
+  "outputDirectory": "dist"
+} 
